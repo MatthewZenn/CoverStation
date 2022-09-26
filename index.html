@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CoverStation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div class="container">
+            <input id="name" placeholder="Name">
+            <input type="text" list="genres" id="genre" placeholder="Genre">
+            <datalist id="genres">
+                <option value="Classical/Ambient">
+                <option value="Rock/Metal">
+                <option value="Hip-Hop/Pop">
+                <option value="Electronic/Dance">
+                <option value="Cinematic/Country">
+            </datalist>
+        </div>
+        <button id="button">Generate</button>
+        <script src="index.js" async defer></script>
+    </body>
+</html>
