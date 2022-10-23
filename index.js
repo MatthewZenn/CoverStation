@@ -15,6 +15,10 @@ button.addEventListener("click", function() {
     else if (genre.value == "Classical/Ambient") {
         Plaid();
     }
+
+    else if (genre.value == "Hip-Hop/Pop") {
+        Web();
+    }
 });
 
 function Stripes() {
@@ -98,6 +102,62 @@ function Plaid() {
         };
 
         ctx.fillStyle = 'rgb(32, 47, 78)';
+
+        if (matrix[i] == 1) {
+        ctx.beginPath();
+        ctx.fillRect(rectData.x,rectData.y, rectData.width, rectData.height);
+        ctx.closePath();
+       }
+    }
+
+    console.log(matrix);
+}
+
+function Web() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    matrix.fill(0);
+
+    for(var i = 0; i < matrix.length; i++) {
+        var x = Math.random()
+        if (x < .2) {
+        matrix[i] = 1
+        }
+    }
+
+    for(var i = 0; i < matrix.length; i++) {
+        var rectData = {
+            "x": i,
+            "y": 0,
+            "width": 1,
+            "height": 50
+        };
+
+        canvas.style.backgroundColor = 'black';
+        ctx.fillStyle = 'white';
+
+        if (matrix[i] == 1) {
+        ctx.beginPath();
+        ctx.fillRect(rectData.x,rectData.y, rectData.width, rectData.height);
+        ctx.closePath();
+       }
+    }
+
+    matrix.fill(0);
+
+    for(var i = 0; i < matrix.length; i++) {
+        var x = Math.random()
+        if (x < .2) {
+        matrix[i] = 1
+        }
+    }
+
+    for(var i = 0; i < matrix.length; i++) {
+        var rectData = {
+            "x": 0,
+            "y": i,
+            "width": 50,
+            "height": 1
+        };
 
         if (matrix[i] == 1) {
         ctx.beginPath();
